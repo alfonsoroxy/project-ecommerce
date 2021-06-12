@@ -119,9 +119,9 @@
                   <div class="col-md-4">
                     <input type="file" class="input-file" wire:model="image" />
                     @if($newimage)
-                      <img src="{{ $newimage->temporaryUrl() }}.jpg" width="120" />
+                      <img src="{{ $newimage->temporaryUrl() }}" width="120" />
                     @else
-                      <img src="{{ asset('assets/images/products') }}/{{$image}}.jpg" width="120" />
+                      <img src="{{ asset('frontend/images/shop/products') }}/{{$image}}" width="120" />
                     @endif
                   </div>
                 </div>

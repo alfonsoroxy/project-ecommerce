@@ -52,7 +52,7 @@ class AdminAddProductComponent extends Component
         $product->featured = $this->featured;
         $product->quantity = $this->quantity;
 
-        $imageName = Carbon::now()->timestamp. '.' .$this->image->extension().'jpg';
+        $imageName = Carbon::now()->timestamp. '.' .$this->image->extension();
         $this->image->storeAs('products', $imageName);
         $product->image = $imageName;
 
