@@ -61,3 +61,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# project-ecommerce" 
+
+## To Run project
+
+cp .env.example .env
+composer install/update
+php artisan key:generate
+php artisan config:cache
+
+edit vendor/laravel/fortify/src/Actions/AttemptToAuthenticate.php
+use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
+
+add to line 56
+session(['utype'=>Auth::user()->utype === 'ADM' ? 'ADM' : 'USR']);
+return redirect(RouteServiceProvider::HOME);

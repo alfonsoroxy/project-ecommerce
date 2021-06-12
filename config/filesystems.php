@@ -33,7 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             // 'root' => storage_path('app'),
-            'root' => public_path('frontend/images/shop/products'),
+            'root' => public_path('uploads/images/shop/'),
         ],
 
         'public' => [
